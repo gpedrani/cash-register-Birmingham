@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+	
+	<h1>Joe's Place Menu </h1>
+
+        <h2>Entrees</h2>
+
+        <div class="items">
+
+            <button class="item" data-name="Hot Dog" data-price="3.75">Hot Dog</button>
+	    <button class="item" data-name="Chili Dog" data-price="4.00">Chili Dog</button>
+	    <button class="item" data-name="Cup of Noodles" data-price="2.00">Cup of Noodles</button>
+	    <button class="item" data-name="Quesadilla" data-price="3.00">Quesadilla</button>
+	    <button class="item" data-name="Fries" data-price="3.00">Fries</button>
+            <button class="item" data-name="Chilicheese Fries" data-price="3.25">Chilicheese Fries</button>
+	    <button class="item" data-name="Burger" data-price="4.00">Burger</button>
+	    <button class="item" data-name="Nachos" data-price="3.75">Nachos</button>
+	    <button class="item" data-name="Nachos w/ chili" data-price="4.00">Nachos w/ chili</button>
+            
+        </div>
+
+	<h2>Snacks</h2>
+
+        <div class="items">
+
+            <button class="item" data-name="Popcorn" data-price="2.00">Popcorn</button>
+	    <button class="item" data-name="Candy" data-price="2.00">Candy</button>
+	    <button class="item" data-name="Ice Cream" data-price="2.00">Ice Cream</button>
+	    <button class="item" data-name="Chips" data-price="2.00">Chips</button>
+	    <button class="item" data-name="Takis" data-price="2.50">Takis</button>
+            <button class="item" data-name="Chips w/ Cheese" data-price="2.50">Chips w/ Cheese</button>
+            
+        </div>
+
+	<h2>Drinks</h2>
+
+        <div class="items">
+
+            <button class="item" data-name="Soda" data-price="1.75">Soda</button>
+	    <button class="item" data-name="Gatorade" data-price="2.50">Gatorade</button>
+	    <button class="item" data-name="Coffee" data-price="1.50">Coffee</button>
+	    <button class="item" data-name="Hot Chocolate" data-price="2.00">Hot Chocolate</button>
+	    <button class="item" data-name="Water" data-price="1.50">Water</button>
+            
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="order-list"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+
+            <label for="payment">Amount Received: $</label>
+            <input type="number" id="payment" placeholder="Enter amount">
+            <button id="calculate-change">Calculate Change</button>
+
+            <p>Change: $<span id="change">0.00</span></p>
+
+            <button id="delete-all">Delete All</button>
+            <button id="refresh-page">Refresh</button>
+            <div class="qr-codes">
+                <h2>Payment Options</h2>
+                <div class="qr-code">
+                    <img src="IMG_0187.jpeg" alt="Zelle QR Code" width="100" height="100">
+                    <p>Zelle</p>
+                </div>
+                <div class="qr-code">
+                    <img src="IMG_0186.jpeg" alt="Venmo QR Code" width="100" height="100">
+                    <p>Venmo</p>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

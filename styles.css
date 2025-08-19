@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f5f5f5;
+    overflow-y: scroll; /* Allow scrolling */
+}
+
+.container {
+    width: 100%;
+    max-width: 700px; /* Sets max width so that it expands as items are added */
+    padding: 50px; /* Extra space at the top */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #59acff;
+    background: linear-gradient(90deg, rgba(89, 172, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 240, 110, 1) 100%);
+}
+
+h3, h2 {
+    color: #003366; /* Dark Blue */
+    text-align: center;
+}
+
+h1 {
+   color: white;
+   background: #003366;
+   text-align: center;
+}
+
+.items {
+    display: flex; /* This overrides the grid layout */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #ffcc00; /* Yellow */
+    color: #003366; /* Dark Blue */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.item:hover {
+    background-color: #ffb700; /* Darker Yellow */
+}
+
+.order-summary {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#delete-all, #calculate-change, #refresh-page {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#delete-all:hover, #calculate-change:hover, #refresh-page:hover {
+    background-color: #002244; /* Darker Blue */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 300px; /* Optional: set a max height */
+    overflow-y: auto;  /* Scroll if the list gets too long */
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+li button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+li button:hover {
+    background-color: darkred;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        width: 45%; /* Make buttons smaller */
+        margin: 5px;
+    }
+    
+    .qr-codes {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .qr-code {
+        display: inline-block;
+        margin: 10px;
+    }
+    
+    .qr-code img {
+        border: 2px solid #003366; /* Add border color */
+        border-radius: 10px;
+    }    
+    /* Other mobile-specific styles */
+}
